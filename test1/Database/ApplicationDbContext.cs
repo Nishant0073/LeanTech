@@ -1,11 +1,16 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 
 
 namespace test1;
-// public class ApplicationDbContext : IdentityDbContext<IdentityUser>
-// {
+public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+{
+    public ApplicationDbContext(DbContextOptions options):base(options)
+    {
+        
+    }
 
-// }
+}
