@@ -31,3 +31,4 @@
 /home/nishant/LearnFolder/test1/obj/Debug/net8.0/test1.pdb
 /home/nishant/LearnFolder/test1/obj/Debug/net8.0/test1.genruntimeconfig.cache
 /home/nishant/LearnFolder/test1/obj/Debug/net8.0/ref/test1.dll
+/home/nishant/LearnFolder/test1/obj/Debug/net8.0/test1.sourcelink.json
