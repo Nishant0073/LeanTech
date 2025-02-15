@@ -9,8 +9,8 @@ public class Constants
         Admin
     }
     public const Roles defaultRole = Roles.User;
-    public const string userName = "nishant@gmail.com";
-    public const string email = "nishant@gmail.com";
-    public const string password = "Pass@123";
+    public const string defualtUserName = "nishant@gmail.com";
+    public const string defaultEmail = "nishant@gmail.com";
+    public const string defaultPassword = "Pass@123";
 
 }
