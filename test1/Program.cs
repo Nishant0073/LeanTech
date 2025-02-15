@@ -14,6 +14,7 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddScoped<IUserService,UserService>();
 
 builder.Services.AddAuthentication(options =>
 {

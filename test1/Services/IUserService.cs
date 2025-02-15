@@ -2,9 +2,9 @@
 
 public interface IUserService
 {
-    public string GenerateToken();
+    public Task<string> GenerateToken(LoginModel model);
 
-    public string AddRole();
-    public string RegisterUser();
+    public Task<string> AddRole();
+    public Task<string> RegisterUser();
 
 }
