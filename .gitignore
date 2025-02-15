@@ -482,8 +482,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
-
-
-#doent 
-appsettings.json
-
+### DotnetCore ###
+# .NET Core build folders
+*/bin/
+*/obj/

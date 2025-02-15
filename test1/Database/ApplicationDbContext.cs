@@ -8,7 +8,7 @@ using Microsoft.Extensions.Options;
 namespace test1;
 public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
-    public ApplicationDbContext(DbContextOptions options):base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
     {
         
     }
