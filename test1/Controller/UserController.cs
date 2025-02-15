@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using System.Formats.Asn1;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace test1;
 [ApiController]
@@ -14,13 +16,36 @@ public class UserController: ControllerBase
         _logger = logger;
     }
 
-    [HttpPost("GetToken")]
+    [HttpPost("token")]
     public async Task<IActionResult> GetToken(LoginModel loginModel){
-          _logger.LogInformation("UserController:: GetToken -> Started");
+          if(!ModelState.IsValid)
+            return BadRequest();
           try{
             return  Ok(await _userService.GenerateToken(loginModel));
           }catch(Exception ex){
             return BadRequest(ex.Message);
           }
+    }
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(LoginModel model){
+        if(!ModelState.IsValid){
+          return BadRequest();
+        }
+        try{
+          return Ok(await _userService.RegisterUser(model));
+        }catch(Exception ex){
+          return BadRequest(ex.Message);
+        }
+    }
+    [HttpPost("addrole")]
+    public  async Task<IActionResult> AddRole(RoleModel model){
+      if(!ModelState.IsValid){
+        return BadRequest();
+      }
+      try{
+        return Ok(await _userService.AddRole(model));
+      }catch(Exception ex){
+        return BadRequest(ex.Message);
+      }
     }
 }
