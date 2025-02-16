@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Test2;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]/[action]")]
 public class UserController: ControllerBase
 {
     [HttpGet]
