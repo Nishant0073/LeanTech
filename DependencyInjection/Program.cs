@@ -22,6 +22,17 @@ builder.Services.AddScoped<TestService>();
 */
 
 
+//builder.Services.AddSingleton<TestService>();
+/*{
+  "service1": "59fae7f2-f4a1-4310-8ae2-603b6db95db8",
+  "service2": "59fae7f2-f4a1-4310-8ae2-603b6db95db8"
+}
+{
+  "service1": "59fae7f2-f4a1-4310-8ae2-603b6db95db8",
+  "service2": "59fae7f2-f4a1-4310-8ae2-603b6db95db8"
+}
+*/
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
